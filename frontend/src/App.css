@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  transition: background 0.3s ease;
+}
+
+.app-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.app-container.light {
+  background: linear-gradient(to right, #ffe0e9, #f9a8d4);
+}
+
+.app-container.dark {
+  background: #1f1f2e;
+  color: white;
+}
+
+.chat-box {
+  width: 90%;
+  max-width: 700px;
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.app-container.dark .chat-box {
+  background: #2d2d44;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.messages {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  padding-right: 10px;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.message .text {
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  background: #fce7f3;
+  max-width: 75%;
+  word-wrap: break-word;
+}
+
+.message.user .text {
+  background: #e0f2fe;
+  align-self: flex-end;
+}
+
+.app-container.dark .message .text {
+  background: #4b5563;
+}
+
+.app-container.dark .message.user .text {
+  background: #2563eb;
+  color: white;
+}
+
+.typing span {
+  animation: blink 1s infinite;
+  margin-right: 2px;
+}
+
+.typing span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% { opacity: 0.2; }
+  20% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  resize: none;
+  height: 60px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+button {
+  background: #ec4899;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #db2777;
+}
+
+.app-container.dark button {
+  background: #7c3aed;
+}
+
+.app-container.dark button:hover {
+  background: #6d28d9;
+}
