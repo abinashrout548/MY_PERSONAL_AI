@@ -85,14 +85,10 @@ Clean the commit history:
 git rebase -i HEAD~n + git push --force
 
 🧠 Powered By
-OpenAI GPT
-
+OpenAI
 React.js
-
 Flask
-
 Vite
-
 Tailwind CSS
 
 🧑‍💻 Author
